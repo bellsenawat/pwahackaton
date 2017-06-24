@@ -4,14 +4,14 @@
   },
   "hosting": {
     "public": "public",
+    "ignore": [
+      "firebase.json"
+    ],
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
-    ],
-    "headers": [
-      { "source":"/serviceWorker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}] }
     ]
   }
 }
