@@ -31,28 +31,23 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Abel|Poppins" rel="stylesheet">
 
-    <title>BELL-PWA</title>
+    <title>I miss you :)</title>
     <base href="/">
   </head>
   
   <body>
-    <h1> Hello guys I know you visit here :)</h1>
      <root>
-      <span class="loader">Loading...</span>
     </root>
   </body>
   
   <!--// serviceWorker-->
-  
- 
-
   <script>
     console.log("service worker here");
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-    .then(function(swregistration) {
-      console.log('Service Worker registered');
-    })
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+      .then(function(swregistration) {
+        console.log('Service Worker registered');
+      })
     .catch(function(err) {
       console.log('Service Worker registration failed: ', err);
     });
