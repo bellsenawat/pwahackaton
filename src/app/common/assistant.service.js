@@ -18,6 +18,10 @@ export class AssistantService {
     return user;
   }
 
+  getCurrentDate() {
+    return new Date();
+  }
+
   getCurrentTime() {
     return new Date().getHours();
   }

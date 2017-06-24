@@ -11,6 +11,7 @@ export const appComponent = {
 
     $onInit() {
       this.sayHi = this.assistantService.sayHi();
+      this.time = this.assistantService.getCurrentDate();
     }
 
   },
