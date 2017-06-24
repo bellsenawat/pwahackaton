@@ -1,6 +1,12 @@
 {
-  "short_name": "BELL-PWA",
   "name": "Starter-PWA",
+  "short_name": "BELL-PWA",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "landscape",
+  "description": "BELL-PWA",
   "icons": [
     {
         "src": "icon/android-chrome-192x192.png",
@@ -13,8 +19,8 @@
         "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
-  "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  "related_applications": [{
+    "platform": "web",
+    "url": "https://bkkpwahack.firebaseapp.com/"
+  }]
 }
