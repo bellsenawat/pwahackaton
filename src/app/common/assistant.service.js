@@ -8,7 +8,7 @@ export class AssistantService {
 
   getUser() {
     let user =  {
-      Name : 'Bell',
+      Name : '',
       Age : 25,
       Location : 'Bangkok',
       Wakeuptime : '10:00',
@@ -29,7 +29,6 @@ export class AssistantService {
     if(time >= 6 && time < 12) {
       return "MORNING";
     }
-
     // Afternoon 
     if(time >= 12 && time < 18) {
       return "AFTERNOON";

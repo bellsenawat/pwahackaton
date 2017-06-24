@@ -11,7 +11,6 @@ export const appComponent = {
 
     $onInit() {
       this.sayHi = this.assistantService.sayHi();
-     
     }
 
   },

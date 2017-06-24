@@ -1,9 +1,11 @@
 <div class="root">
-  <app-nav user="$ctrl.user" on-logout="$ctrl.logout();"></app-nav>
-  <app-sidebar></app-sidebar>
-  <div class="app">
-    <div ui-view>
+  <div class="app" align="center">
+    <img src="/img/apple-touch-icon-precomposed.png" width="100" alt="Logo">
+    <h1> PWAssistant </h1>
+    <h4 style="margin-top:20px;">
       {{$ctrl.sayHi}}
+    </h4>
+    <div ui-view>
     </div>
   </div>
 </div>
