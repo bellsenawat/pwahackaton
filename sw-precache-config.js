@@ -15,7 +15,7 @@ module.exports = {
   /* Array of one or more string patterns that will be passed in to glob.
      All files matching these globs will be automatically precached by the generated service worker. */
   staticFileGlobs: [
-    'dis/app.bundle.js',
+    'dist/app.bundle.js',
     'dist/index.html',
     'dist/fonts/**',
     'dist/img/**',

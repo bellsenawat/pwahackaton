@@ -4,9 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var copyPlugin = require('copy-webpack-plugin');
 var extractPlugin = require('extract-text-webpack-plugin');
 var CompressionPlugin = require("compression-webpack-plugin");
-// var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
-// const PUBLIC_PATH = 'http://localhost:8080/';  // webpack needs the trailing slash for output.publicPath 
 const root = `${__dirname}/src`;
 const dist = `${__dirname}/dist`;
 
@@ -58,7 +56,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.ejs',
       inject: 'body',
-      // hash: true,
       chunks: ['app']
     }),
 
