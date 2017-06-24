@@ -8,7 +8,7 @@
     "serve": "webpack-dev-server --progress --config ./config/webpack.dev.config.js",
     "start": "webpack-dev-server --progress --config ./config/webpack.dev.config.js",
     "test": "karma start",
-    "deploy": "npm run build:dist && firebase deploy",
+    "deploy": "npm run build && sw-precache --verbose --config=sw-precache-config.js && firebase deploy",
     "precache": "sw-precache --verbose --config=sw-precache-config.js"
   },
   "license": "MIT",
