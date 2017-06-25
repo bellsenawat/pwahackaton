@@ -1,12 +1,12 @@
 {
-  "name": "Starter-PWA",
-  "short_name": "BELL-PWA",
+  "name": "PWAssistant",
+  "short_name": "PWAssistant",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "orientation": "landscape",
-  "description": "BELL-PWA",
+  "description": "PWAssistant easy easy",
   "icons": [
     {
         "src": "/img/android-chrome-192x192.png",

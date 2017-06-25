@@ -4,10 +4,16 @@ export class AssistantService {
   constructor() {
     'ngInject';
     this.periodTime = this.getTimeDuration();
+    this.user = JSON.parse(localStorage.getItem("user"));
+    console.log("this.user", this.user)
+  }
 
+  isUserIntroYet (){
+     return ((this.user === null) ? false : true);
   }
 
   setUser(user) {
+    localStorage.setItem("user", JSON.stringify(user));
     this.user = user;
   }
 
@@ -49,6 +55,7 @@ export class AssistantService {
   sayHi() {
 
     let user = this.getUser();
+    console.log(user)
     // Morning 
     if(this.periodTime == 'MORNING') {
       return "Good morning " + user.name;
@@ -72,7 +79,7 @@ export class AssistantService {
   }
 
   askHelper() {
-
+    return "Do you need me help ? Please select command";
   }
 
   addTodo() {

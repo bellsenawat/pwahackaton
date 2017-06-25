@@ -5,8 +5,8 @@
       <div class="container">
         <div align="center">
           <img src="/img/apple-touch-icon-precomposed.png" width="100" alt="Logo">
-          <h1> PWAssistant </h1>
-          <p> I am an assistant, I can help you as my creator can coding. </p>  
+          <h1 lass="title"> PWAssistant </h1>
+          <p lass="title"> I am an assistant, I can help you as my creator can coding. </p>  
           <br>
           <br>
         </div>
@@ -53,18 +53,26 @@
                     <input class="input" type="time" ng-model="$ctrl.user.wakeuptime" placeholder="07:00" required>
                   </p>
                 </div>
-                <p class="control" align="center">
-                  <button type="submit" ng-disabled="userIntro.$invalid" 
-                  class="button is-primary">This is me :)</button>
-                </p>
+                <div align=center>
+                  <p class="control" align="center">
+                    <button type="submit" ng-disabled="userIntro.$invalid" 
+                    class="button is-primary is-medium">This is me :)</button>
+                  </p>
+                </div>
               </div>
             </form>
           </div>
         </div>
-        <div ng-if="$ctrl.assistantSection">
-          <h1> {{$ctrl.sayHi}} </h1>
-        </div>
-      </div>
+        <section class="section" ng-if="$ctrl.assistantSection">
+          <div class="container">
+            <div align="cneter">
+              <h1 class="title">{{$ctrl.sayHi}}</h1>
+              <h2 class="subtitle">
+                I can help you as follow this command please select :)
+              </h2>
+            </div>
+          </div>
+        </section>
     </div>
   </section>
   </div>

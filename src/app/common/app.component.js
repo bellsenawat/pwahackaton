@@ -10,17 +10,26 @@ export const appComponent = {
     }
 
     $onInit() {
-      this.isCompleteIntro = false;
-      this.assistantSection = false;
-      // this.sayHi = this.assistantService.sayHi();
-      // this.time = this.assistantService.getCurrentDate();
+      if(this.assistantService.isUserIntroYet() ) {
+        this.isCompleteIntro = true;
+        this.assistantSection = true;
+        this.sayHiUser();
+      } else {
+        this.isCompleteIntro = false;
+        this.assistantSection = false;
+      }
+     
     }
 
     userIntro() {
       this.isCompleteIntro = true;
       this.assistantSection = true;
       this.assistantService.setUser(this.user);
-      this.sayHi = this.assistantService.sayHi();
+      this.sayHiUser();
+    }
+
+    sayHiUser() {
+       this.sayHi = this.assistantService.sayHi();
     }
 
     
