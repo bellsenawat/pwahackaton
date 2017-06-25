@@ -10,9 +10,20 @@ export const appComponent = {
     }
 
     $onInit() {
-      this.sayHi = this.assistantService.sayHi();
-      this.time = this.assistantService.getCurrentDate();
+      this.isCompleteIntro = false;
+      this.assistantSection = false;
+      // this.sayHi = this.assistantService.sayHi();
+      // this.time = this.assistantService.getCurrentDate();
     }
+
+    userIntro() {
+      this.isCompleteIntro = true;
+      this.assistantSection = true;
+      this.assistantService.setUser(this.user);
+      this.sayHi = this.assistantService.sayHi();
+    }
+
+    
 
   },
 };

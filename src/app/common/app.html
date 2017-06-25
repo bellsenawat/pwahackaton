@@ -1,12 +1,71 @@
 <div class="root">
-  <div class="app" align="center">
-    <img src="/img/apple-touch-icon-precomposed.png" width="100" alt="Logo">
-    <h1> PWAssistant </h1>
-    <h4> Current time : {{$ctrl.time}} </h4>
-    <h4 style="margin-top:20px;">
-      {{$ctrl.sayHi}}
-    </h4>
-    <div ui-view>
+  <div class="app" >
+    <section class="hero is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div align="center">
+          <img src="/img/apple-touch-icon-precomposed.png" width="100" alt="Logo">
+          <h1> PWAssistant </h1>
+          <p> I am an assistant, I can help you as my creator can coding. </p>  
+          <br>
+          <br>
+        </div>
+        <div class="columns is-vcentered" ng-if="!$ctrl.isCompleteIntro">
+          <div class="column is-4 is-offset-4">
+            <h1 class="title" align="center">
+              Introduce Yourself 
+            </h1>
+            <form name="userIntro" novalidate ng-submit="$ctrl.userIntro()">  
+              <div class="box">
+                <div class="field">
+                  <label class="label">Name</label>
+                  <p class="control">
+                    <input class="input" type="text" ng-model="$ctrl.user.name" placeholder="John Doe" required>
+                  </p>
+                </div>
+                <div class="field">
+                  <label class="label">Age</label>
+                  <p class="control">
+                  <input class="input" type="number" ng-model="$ctrl.user.age" placeholder="43" required>
+                  </p>
+                </div>
+                <div class="field">
+                  <label class="label">Address</label>
+                  <p class="control">
+                    <input class="input" type="text" ng-model="$ctrl.user.address" placeholder="Bangkok" required>
+                  </p>
+                </div>
+                <div class="field">
+                  <label class="label">Job Title</label>
+                  <p class="control">
+                    <input class="input" type="text" ng-model="$ctrl.user.job" placeholder="Bot Creator" required>
+                  </p>
+                </div>
+                <div class="field">
+                  <label class="label">Sleep time</label>
+                  <p class="control">
+                    <input class="input" type="time" ng-model="$ctrl.user.sleeptime" placeholder="23:00" required>
+                  </p>
+                </div>
+                <div class="field">
+                  <label class="label">Wake up time</label>
+                  <p class="control">
+                    <input class="input" type="time" ng-model="$ctrl.user.wakeuptime" placeholder="07:00" required>
+                  </p>
+                </div>
+                <p class="control" align="center">
+                  <button type="submit" ng-disabled="userIntro.$invalid" 
+                  class="button is-primary">This is me :)</button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div ng-if="$ctrl.assistantSection">
+          <h1> {{$ctrl.sayHi}} </h1>
+        </div>
+      </div>
     </div>
+  </section>
   </div>
 </div>

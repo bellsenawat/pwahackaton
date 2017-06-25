@@ -4,18 +4,15 @@ export class AssistantService {
   constructor() {
     'ngInject';
     this.periodTime = this.getTimeDuration();
+
+  }
+
+  setUser(user) {
+    this.user = user;
   }
 
   getUser() {
-    let user =  {
-      Name : '',
-      Age : 25,
-      Location : 'Bangkok',
-      Wakeuptime : '10:00',
-      Sleeptime : '02:00',
-    }
-
-    return user;
+    return this.user;
   }
 
   getCurrentDate() {
@@ -54,22 +51,22 @@ export class AssistantService {
     let user = this.getUser();
     // Morning 
     if(this.periodTime == 'MORNING') {
-      return "Good morning " + user.Name;
+      return "Good morning " + user.name;
     }
 
     // Afternoon 
     if(this.periodTime == 'AFTERNOON') {
-      return "Good afternoon " + user.Name;
+      return "Good afternoon " + user.name;
     }
 
     // Eve 
     if(this.periodTime == 'EVENING') {
-      return "Good evening " + user.Name;
+      return "Good evening " + user.name;
     }
 
     // late night
     if(this.periodTime == 'LATENIGHT') {
-      return "WTF!! " + user.Name + " You have to go to sleep now !!!";
+      return "WTF!! " + user.name + " You have to go to sleep now !!!";
     }
     
   }

@@ -29,8 +29,10 @@
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
-    <link href="https://fonts.googleapis.com/css?family=Abel|Poppins" rel="stylesheet">
-
+    <!--<link href="https://fonts.googleapis.com/css?family=Abel|Poppins" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/styles/bulmaswatch.min.css">
+  
     <title>PWAssistant</title>
     <base href="/">
   </head>
@@ -39,9 +41,10 @@
     <root>
     </root>
   </body>
-  
-  <!--// serviceWorker-->
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCGRr8mwyPDWjk8ODlQC8h26t-vcxnUyE&libraries=places&callback=initAutocomplete"
+  async defer></script>-->
   <script>
+    
     console.log("service worker here");
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js')
@@ -53,4 +56,7 @@
     });
   }
   </script>
+  <noscript>
+      Sorry your browser not support or somthing went wrong :(
+  </noscript>
 </html>

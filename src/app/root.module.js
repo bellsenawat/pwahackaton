@@ -2,6 +2,7 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import { rootComponent } from './root.component';
 import { common } from './common/common.module';
+
 import './root.scss';
 
 
