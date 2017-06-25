@@ -1,6 +1,6 @@
 <div class="root">
   <div class="app" >
-    <section class="hero is-fullheight">
+    <section class="hero">
     <div class="hero-body">
       <div class="container">
         <div align="center">
@@ -70,6 +70,30 @@
               <h2 class="subtitle">
                 I can help you as follow this command please select :)
               </h2>
+              <p class="control" align="center">
+                 <div class="column is-6 is-offset-3">
+                    <div class="box">
+                      <div class="field">
+                        <label class="label">พิมพ์มาเลย</label>
+                        <p class="control">
+                          <input class="input" type="text" ng-model="$ctrl.searchtext">
+                        </p>
+                      </div>
+                      <button class="button is-primary is-medium" ng-click="$ctrl.serachFood()">อยากหาร้านอาหาร</button>
+                      <button class="button is-primary is-medium" ng-click="$ctrl.serachFlight()">อยากจองตั๋วเครื่องบิน</button>
+                      <button class="button is-primary is-medium" ng-click="$ctrl.serachTodo()">อยากจดบันทึก</button>
+                      <button class="button is-primary is-medium" ng-click="$ctrl.needToSleep()">อยากนอน</button>
+                    <div>
+                  </div>
+              </p>
+              <p class="control" align="center">
+                 <div class="column"  ng-show="$ctrl.todlListActive">
+                    <h1 class="title">TODO LIST FOR {{$ctrl.user.name}}</h1>
+                    <div class="box" ng-repeat="list in $ctrl.todlList track by $index">
+                      <li> {{list}} </li>
+                    <div>
+                  </div>
+              </p>
             </div>
           </div>
         </section>
@@ -77,3 +101,20 @@
   </section>
   </div>
 </div>
+
+<div class="modal" ng-class="{'is-active' : $ctrl.modalSleepOpen}">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+          <article class="media">
+            <div class="media-content">
+              <div class="content">
+                  <h1> {{$ctrl.message}} </h1>
+                  <button class="button is-primary is-medium" ng-click="$ctrl.confirmSleep()">ใช่ ง่วงมาก</button>
+              </div>
+            </div>
+          </article>
+        </div>
+    </div>
+    <button class="modal-close" ng-click="$ctrl.modalSleepOpen = false"></button>
+  </div>
